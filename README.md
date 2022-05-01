@@ -15,7 +15,7 @@ be added at the last element of the array, and all previous values will be shift
   of the last six gammes only. </li>
   
   <li>The performance array will be stored in a SharedPreferences object. The SharedPreferences object is fetched at the start of the activity and an
-    alert dialog is presetned to the user suggesting about his or her performance. </li>
+    alert dialog is presetned to the user suggesting on his or her performance based on the last six games. </li>
 
   <li><b>sumOfScore</b> method should summing up the values of score array.</li>
 
