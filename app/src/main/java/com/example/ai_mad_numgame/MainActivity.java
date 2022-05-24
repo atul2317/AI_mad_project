@@ -72,10 +72,52 @@ public class MainActivity extends AppCompatActivity {
     public void newMatch() {  //A game is composed of three matches
 
         int operand1 = random.nextInt(10);
-        int operand2=0;
-        //check is operand2 is not zero; otherwise in case of division-divide by zero error will come
+        int operand2= random.nextInt(10);
+        int correctButton=random.nextInt(4);
+
         String operator = operators[random.nextInt(4)];
         textView2.setText(operand1 + operator + operand2);
+
+        int correctans=-100;
+        if(operators.equals("+")) {
+            correctans = operand1 + operand2;
+        }
+        else if(operators.equals("-")) {
+            correctans = operand1 - operand2;
+        }
+        else if(operators.equals("/")) {
+            correctans = operand1 / operand2;
+        }
+        else {
+            correctans = operand1*operand2;
+        }
+        if(correctButton==0){
+            button1.setText(correctans+" ");
+            button2.setText(correctans+1+" ");
+            button3.setText(correctans-1+" ");
+            button4.setText(correctans+2+" ");
+        }
+        if(correctButton==1 ){
+            button1.setText(correctans+2+" ");
+            button2.setText(correctans+" ");
+            button3.setText(correctans-1+" ");
+            button4.setText(correctans+1+" ");
+        }
+        else if(correctButton==2) {
+            button1.setText(correctans -1 + " ");
+            button2.setText(correctans + 1 + " ");
+            button3.setText(correctans + " ");
+            button4.setText(correctans + 2 + " ");
+        }
+
+        else if(correctButton==3) {
+            button1.setText(correctans + 2+" ");
+            button2.setText(correctans + 1 + " ");
+            button3.setText(correctans - 1 + " ");
+            button4.setText(correctans + " ");
+        }
+        //check is operand2 is not zero; otherwise in case of division-divide by zero error will come
+
 
       // Your code here, to diplay correct and incorrect options on the buttons
 
